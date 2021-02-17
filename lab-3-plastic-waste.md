@@ -3,7 +3,7 @@ Lab 3 - Plastic Waste
 DSC 200 - Data Science I
 2021-02-17
 
-Student Name:Fadia alanzi
+Student Name:fadia alanzi
 
 Student ID:2201001182
 
@@ -157,7 +157,17 @@ E4. Convert your side-by-side box plots from the previous task to
 What do the violin plots reveal that box plots do not? What features are
 apparent in the box plots but not in the violin plots?
 
-**Remember:** We use `geom_point()` to make scatterplots.
+``` r
+ggplot(data = plastic_waste,
+mapping = aes(x = continent,
+y = plastic_waste_per_cap)) +
+geom_violin()
+```
+
+answer:box plots provid a coarser summary of the data , provide more of
+summary of a distribution can also be seen as advantage in cartain
+cases. than violin plots **Remember:** We use `geom_point()` to make
+scatterplots.
 
 E5. Visualize the relationship between plastic waste per capita and
 mismanaged plastic waste per capita using a scatterplot. Describe the
@@ -192,7 +202,7 @@ use](https://ggplot2.tidyverse.org/reference/index.html#section-geoms).
 E8. Recreate the following plot, and interpret what you see in context
 of the data.
 
-![](lab-3-plastic-waste_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](lab-3-plastic-waste_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 Knit, *commit (with an appropriate message), and push your changes to
 GitHub with an appropriate commit message. Make sure to commit and push
