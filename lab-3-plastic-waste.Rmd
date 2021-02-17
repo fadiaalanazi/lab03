@@ -5,7 +5,7 @@ date: "`r Sys.Date()`"
 output: github_document
 ---
 
-Student Name:Fadia alanzi
+Student Name:fadia alanzi
 
 Student ID:2201001182
 
@@ -130,7 +130,15 @@ ggplot(data = plastic_waste,
 
 E4.  Convert your side-by-side box plots from the previous task to [violin plots](http://ggplot2.tidyverse.org/reference/geom_violin.html). What do the violin plots reveal that box plots do not? What features are apparent in the box plots but not in the violin plots?
 
+```{r}
 
+ggplot(data = plastic_waste,
+mapping = aes(x = continent,
+y = plastic_waste_per_cap)) +
+geom_violin()
+
+```
+answer:box plots provid a coarser summary of the data , provide more of summary of a distribution can also be seen as advantage in cartain cases. than violin plots
 **Remember:** We use `geom_point()` to make scatterplots.
 
 
