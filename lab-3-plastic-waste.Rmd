@@ -5,7 +5,7 @@ date: "`r Sys.Date()`"
 output: github_document
 ---
 
-Student Name:fadia alanzi
+Student Name:Fadia alanzi
 
 Student ID:2201001182
 
