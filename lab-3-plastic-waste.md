@@ -3,7 +3,7 @@ Lab 3 - Plastic Waste
 DSC 200 - Data Science I
 2021-02-17
 
-Student Name:fadia alanzi
+Student Name:Fadia alanzi
 
 Student ID:2201001182
 
@@ -132,7 +132,10 @@ E3. Describe why we defined the `color` and `fill` of the curves by
 mapping aesthetics of the plot but we defined the `alpha` level as a
 characteristic of the plotting geom.
 
-Answer here:
+Answer here:because her we represent a set of data(continents) , not
+tust color control , as ehe colors here belong to the continents , and
+also the filling is related to the continents but the alpha it’s talking
+about all graphic (gemo\_density)
 
 *Now is a good time to knit your document and commit and push your
 changes to GitHub with an appropriate commit message. Make sure to
