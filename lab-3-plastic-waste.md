@@ -229,14 +229,32 @@ The term “smooth” should help you [pick which geom to
 use](https://ggplot2.tidyverse.org/reference/index.html#section-geoms).
 
 E8. Recreate the following plot, and interpret what you see in context
-of the data.
+of the data. anwer:gemo\_smooth(aids the eye in seeing patterns in the
+presence of verplotssing also it’s help us to do see the curve of the
+data and analyis it via a differnt way) the costal in asia and north
+america is have the most plastic waste per capita and the lowest
+population
 
 ![](lab-3-plastic-waste_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
-Knit, *commit (with an appropriate message), and push your changes to
-GitHub with an appropriate commit message. Make sure to commit and push
-all changed files so that your Git pane is cleared up afterwards and
-review the md document on GitHub to make sure you’re happy with the
-final state of your work.*
+``` r
+plastic_waste %>% 
+  mutate(coastal_pop_prop = coastal_pop / total_pop) %>%
+  filter(plastic_waste_per_cap < 3) %>%
+  ggplot(aes(x = coastal_pop_prop, y = plastic_waste_per_cap, color = continent)) + 
+    geom_point() +
+    geom_smooth(color = "black"mothed ="glm") +
+    scale_color_viridis_d() +
+    labs(x = "Coastal population proportion (Coastal / total population)", 
+         y = "Plastic waste per capita ", 
+         color = "Continent",
+         title = "Plastic waste vs. coastal population proportion",
+     subtitle = "by continent") +
+  theme_minimal()
 
-Lab material sourced from <https://datasciencebox.org/>
+
+
+Knit, *commit (with an appropriate message), and push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards and review the md document on GitHub to make sure you're happy with the final state of your work.*
+
+Lab material sourced from https://datasciencebox.org/
+```
