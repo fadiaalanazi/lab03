@@ -146,6 +146,10 @@ E5.  Visualize the relationship between plastic waste per capita and mismanaged 
     Describe the relationship.
     
 ```{r plastic_waste_per_cap-scatter}
+ggplot(data = plastic_waste,
+       mapping = aes(x = mismanaged_plastic_waste_per_cap,
+                     y = plastic_waste_per_cap)) +
+    geom_point()
 
 ```
 
@@ -153,8 +157,12 @@ E6.  Colour the points in the scatterplot by continent.
     Does there seem to be any clear distinctions between continents with respect to how plastic waste per capita and mismanaged plastic waste per capita are associated?
     
 ```{r plastic_waste_per_cap-scatter-by-continent}
-
+ggplot(data = plastic_waste,
+       mapping = aes(x = mismanaged_plastic_waste_per_cap,color = continent, fill = continent,
+                     y = plastic_waste_per_cap)) +
+    geom_point()
 ```
+anwer:europe (positive) relationship , africa is the most (mismanged_plastic waste per cap )
 
 E7.  Visualize the relationship between plastic waste per capita and total population as well as plastic waste per capita and coastal population.
     You will need to make two separate plots.
@@ -196,6 +204,7 @@ plastic_waste %>%
          subtitle = "by continent") +
     theme_minimal()
 ```
+
 
 Knit, *commit (with an appropriate message), and push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards and review the md document on GitHub to make sure you're happy with the final state of your work.*
 
